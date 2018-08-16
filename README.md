@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
  <title>zdyt</title>
 </head>
-<body background="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534392140280&di=87fcfd889a648209dbeddcc88074f7f5&imgtype=0&src=http%3A%2F%2Fimg5q.duitang.com%2Fuploads%2Fitem%2F201505%2F23%2F20150523145229_xnXet.gif">
+<body background="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2624043466,2489318442&fm=27&gp=0.jpg">
    
 <h1><a href="https://www.jdy.com/login">精斗云</a></h1>
 <h1><a href="https://msdn.itellyou.cn/">MSDN</a></h1>
