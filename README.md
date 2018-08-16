@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+ <title>zdyt</title>
 </head>
-<body>
-    <div id="Layer1" style="position:fixed; left:0px; top:0px; width:100%; height:100%">  
-    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534275370696&di=ac081cdc87073c6cffe613c018e792f8&imgtype=0&src=http%3A%2F%2Fimg.pconline.com.cn%2Fimages%2Fupload%2Fupc%2Ftx%2Fwallpaper%2F1212%2F28%2Fc0%2F16959020_1356668727492.jpg" width="100%" height="100%"/>  
-
+<body  background=“https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534392140280&di=87fcfd889a648209dbeddcc88074f7f5&imgtype=0&src=http%3A%2F%2Fimg5q.duitang.com%2Fuploads%2Fitem%2F201505%2F23%2F20150523145229_xnXet.gif“>
+   
 <h1><a href="https://www.jdy.com/login">精斗云</a></h1>
 <h1><a href="https://msdn.itellyou.cn/">MSDN</a></h1>
 <h1><a href="https://www.itsk.com/">IT天空</a></h1>
