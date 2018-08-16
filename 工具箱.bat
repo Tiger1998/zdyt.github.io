@@ -15,16 +15,17 @@ color 7c
 cls
 echo -----------------------------------------
 echo.
-echo a:ZDYT��վ b:����WIN10  c:�Ż�ϵͳ 
+echo a:ZDYT网站 b:激活WIN10  c:优化系统 d:修复系统
 echo.
-echo d:�˳�����
+echo e:退出程序
 echo -----------------------------------------
-set /p a=�����������ѡ��:
+set /p a=请输入上面的选项:
 if /i %a%==a goto a
 if /i %a%==b goto b
 if /i %a%==c goto c
 if /i %a%==d goto d
-echo ����������󣬰����������������
+if /i %a%==e goto e
+echo 你的输入有误，按任意键返回主程序
 pause >>nul
 goto zhu
 :a
@@ -37,25 +38,25 @@ slmgr /ato
 slmgr.vbs -xpr
 goto zhu
 :c
-echo ���������Ż���������Ϊ����ѯ�������ں����ڵ�ʱ�䡣
+echo 您好我是优化软件，先为您查询今日日期和现在的时间。
 
 ping 127.0.0.1 /n 2 >nul
 
-echo %date:~0,4%��%date:~5,2%��%date:~8,2%��%time:~0,8%
+echo %date:~0,4%年%date:~5,2%月%date:~8,2%日%time:~0,8%
 
 pause
 
 ping 127.0.0.1 /n 2 >nul
 
-echo ����ר���Ż����Եģ�����Ϊ���Ż�����
+echo 我是专门优化电脑的，可以为您优化电脑
 
 echo. 
 
-echo �˹��߿��԰���ϵͳ���٣� 
+echo 此工具可以帮您系统提速！ 
 
 echo. & pause 
 
-echo ��һ��,Windows BAT��������C�̵�ϵͳ��������ʱ�ļ������Ժ󡭡� 
+echo 第一步,Windows BAT正在清理C盘的系统垃圾和临时文件，请稍后…… 
 
 del /f /s /q %systemdrive%\*.tmp 
 
@@ -89,13 +90,13 @@ del /f /s /q "C:\WINDOWS\HELP\*.*"
 
 del /f /s /q "%userprofile%\recent\*.*" 
 
-echo ��ɡ̣���һ������ʹ�ô�������ʵ�ó������������̵������ļ��� 
+echo 完成√，下一步将会使用磁盘清理实用程序清理其他盘的垃圾文件。 
 
 echo. & pause 
 
 cleanmgr 
 
-echo �ڶ�������������������ӿ�ϵͳ�����ٶȣ� 
+echo 第二步：清理开机启动项，加快系统开机速度！ 
 
 echo. & pause 
 
@@ -143,23 +144,23 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Shared Tools\MSConfig\startupreg\
 
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Shared Tools\MSConfig\startupreg\PHIME2002ASync" /v key /d SOFTWARE\Microsoft\Windows\CurrentVersion\Run 
 
-del "C:\Documents and Settings\All Users\����ʼ���˵�\����\����\*.*" /q /f 
+del "C:\Documents and Settings\All Users\「开始」菜单\程序\启动\*.*" /q /f 
 
-del "C:\Documents and Settings\Default User\����ʼ���˵�\����\����\*.*" /q /f 
+del "C:\Documents and Settings\Default User\「开始」菜单\程序\启动\*.*" /q /f 
 
-del "%userprofile%\����ʼ���˵�\����\����\*.*" /q /f 
+del "%userprofile%\「开始」菜单\程序\启动\*.*" /q /f 
 
-echo ��������ʹ�á����ӻ�ɾ��������ж�ز���Ҫ�����������ϵͳ�����ٶȡ�����Ҫ�ֶ�ɾ���� 
+echo 第三步：使用“添加或删除程序”来卸载不需要的软件，提高系统运行速度。（需要手动删除） 
 
 echo. & pause 
 
 appwiz.cpl 
 
-echo ���Ĳ������������Ż����룺�ڡ��ҵĵ��ԡ����Ҽ����������ԡ����߼�ѡ�ҳ�������ܲ��ֵ����ô� �������Ϊ������ܣ����ɡ�����Ҫ�ֶ����ã� 
+echo 第四步：更多性能优化，请：在“我的电脑”点右键，按“属性”，高级选项卡页，在性能部分的设置打开 点击调整为最佳性能，即可。（需要手动设置） 
 
 echo. & pause 
 
-echo ���岽�����ٲ鶾ɱ����������ϵͳ��
+echo 第五步：快速查毒杀毒，不损伤系统！
 
 echo. & pause 
 
@@ -269,7 +270,7 @@ echo. *****************************
 
 echo. 
 
-echo. ���ڲ鶾...�벻Ҫ�ر�...... 
+echo. 正在查毒...请不要关闭...... 
 
 echo. 
 
@@ -417,11 +418,11 @@ net stop "Trend ServerProtect Agent"
 
 net stop "Trend ServerProtect "
 
-echo �鶾ɱ�����
+echo 查毒杀毒完毕
 
 pause
 
-echo ���������Ż�ϵͳ����
+echo 第六步：优化系统服务。
 
 pause
 
@@ -586,6 +587,7 @@ sc config ERSvc start= DISABLED
 sc config NtmsSvc start= DEMAND
 
 sc config NVSvc start= DEMAND
-
 :d
+DISM /Online /Cleanup-image /RestoreHealth
+:e
 exit
