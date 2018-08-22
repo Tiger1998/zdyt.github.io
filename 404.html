@@ -1,7 +1,364 @@
+
 <!DOCTYPE html>
+
 <html lang="en">
+
+<head>
+
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8">
+
+    <title>淘宝</title>
+
+    <style>
+
+        @font-face {
+
+            font-family: iconfont;
+
+            src: url(http://g.tbcdn.cn/tb/icon-font/1.1.5/iconfont.eot);
+
+            src: url(http://g.tbcdn.cn/tb/icon-font/1.1.5/iconfont.eot?#iefix) format("embedded-opentype"), url(http://g.tbcdn.cn/tb/icon-font/1.1.5/iconfont.woff) format("woff"), url(http://g.tbcdn.cn/tb/icon-font/1.1.5/iconfont.ttf) format("truetype"),
+
+            url(http://g.tbcdn.cn/tb/icon-font/1.1.5/iconfont.svg#uxiconfont) format("svg")
+
+        }
+
+ 
+
+        * {
+
+            font-size: 12px;
+
+            margin: 0;
+
+            padding: 0
+
+        }
+
+ 
+
+        .container {
+
+            width: 700px;
+
+            margin: 0 auto;
+
+            top: 20px;
+
+            position: relative
+
+        }
+
+ 
+
+        a {
+
+            text-decoration: none;
+
+            color: #6c6c6c
+
+        }
+
+ 
+
+        .tips {
+
+            float: right;
+
+            padding: 5px 10px
+
+        }
+
+ 
+
+        .button {
+
+            float: right
+
+        }
+
+ 
+
+        .search {
+
+            background-image: url("taobao.png");
+
+            width: 80px;
+
+            height: 42px;
+
+            background-repeat: no-repeat;
+
+            border: 0;
+
+            cursor: pointer;
+
+        }
+
+ 
+
+        .panel {
+
+            height: 38px;
+
+            background: #f50;
+
+            overflow: hidden;
+
+            padding: 2px 0 2px 74px;
+
+        }
+
+ 
+
+        .panel input {
+
+            height: 38px;
+
+            line-height: 38px;
+
+            width: 100%;
+
+            border: 0 none;
+
+            outline: 0;
+
+            background: white;
+
+        }
+
+ 
+
+        i {
+
+            position: absolute;
+
+            top: 15px;
+
+            left: 80px;
+
+            z-index: 2;
+
+        }
+
+ 
+
+        .iconfont {
+
+            font-family: iconfont;
+
+            font-size: 12px;;
+
+            font-style: normal;
+
+            color: grey;
+
+        }
+
+ 
+
+        ul {
+
+            list-style: none;
+
+            display: block;
+
+        }
+
+ 
+
+        .list {
+
+            position: absolute;
+
+            top: 2px;
+
+            left: 2px;
+
+            width: 72px;
+
+            height: 38px;
+
+            overflow: hidden;
+
+            background: white;
+
+            border-right: 1px solid grey;
+
+            text-align: center;
+
+        }
+
+ 
+
+        .list li {
+
+            display: block;
+
+            height: 38px;
+
+            line-height: 38px;
+
+        }
+
+ 
+
+        .list a {
+
+            color: black;
+
+        }
+
+ 
+
+        .selected {
+
+            background: #f6f6f6;
+
+            display: block;
+
+        }
+
+    </style>
+
+</head>
+
 <body>
-    <div id="Layer1" style="position:fixed; left:0px; top:0px; width:100%; height:100%">  
-    <img src="http://image.baidu.com/search/detail?ct=503316480&z=undefined&tn=baiduimagedetail&ipn=d&word=404&step_word=&ie=utf-8&in=&cl=2&lm=-1&st=undefined&cs=3875891126,1957323933&os=1210549358,1667840729&simid=0,0&pn=9&rn=1&di=101278682670&ln=1460&fr=&fmq=1534614667832_R&fm=&ic=undefined&s=undefined&se=&sme=&tab=0&width=undefined&height=undefined&face=undefined&is=0,0&istype=0&ist=&jit=&bdtype=0&spn=0&pi=0&gsm=0&objurl=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F015c4357764df30000012e7e576eae.jpg%40900w_1l_2o_100sh.jpg&rpstart=0&rpnum=0&adpicid=0" width="100%" height="100%"/>  
+
+<div class="container">
+
+    <div id="tab" class="list">
+
+        <ul>
+
+            <li id="tab1" class="selected"><a href="#">宝贝</a></li>
+
+            <li id="tab2"><a href="#">店铺</a></li>
+
+        </ul>
+
+    </div>
+
+    <div class="pannel">
+
+        <form>
+
+            <div class="tips">
+
+                <a href="#">高级<br>搜索</a>
+
+            </div>
+
+            <div class="button">
+
+                <button class="search" type="submit"></button>
+
+            </div>
+
+            <div class="panel">
+
+                <input x-webkit-speech="">
+
+                <i class="iconfont">ő</i>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
 </body>
+
+<script>
+
+    var tab = document.getElementById('tab');
+
+    var tab1 = document.getElementById('tab1')
+
+    var tab2 = document.getElementById('tab2')
+
+    tab.onmouseover = function () {
+
+        this.style.height = "auto"
+
+    };
+
+    tab.onmouseout = function () {
+
+        this.style.height = "38px"
+
+    };
+
+    tab1.onmouseover = function () {
+
+        over(tab1);
+
+    };
+
+    tab1.onmouseout = function () {
+
+        this.className = "";
+
+    }
+
+    tab1.onclick = function () {
+
+        click(tab1)
+
+    }
+
+    tab2.onmouseover = function () {
+
+        over(tab2)
+
+    };
+
+    tab2.onmouseout = function () {
+
+        this.className = "";
+
+    }
+
+    tab2.onclick = function () {
+
+        click(tab2)
+
+    }
+
+ 
+
+    function over(obj) {
+
+        if (obj.className.indexOf('selected') < 0) {
+
+            obj.className += "selected";
+
+        }
+
+    }
+
+    function click(obj) {
+
+        tab.style.height = "38px"
+
+        tab1.innerHTML = obj.innerHTML;
+
+        if (tab1.innerHTML == '宝贝') {
+
+            tab2.innerHTML = '商铺'
+
+        } else {
+
+            tab2.innerHTML = '宝贝'
+
+        }
+
+    }
+
+ 
+
+</script>
+
 </html>
