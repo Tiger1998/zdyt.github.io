@@ -5,6 +5,18 @@
 <title>Z-D-Y-T</title>
 
 <script type="text/javascript"> 
+ (function (doc, win) {
+      var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function () {
+          var clientWidth = docEl.clientWidth;
+          if (!clientWidth) return;
+     
+        };
+      if (!doc.addEventListener) return;
+      win.addEventListener(resizeEvt, recalc, false);
+      doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
 <!-- 
 function MM_jumpMenu(targ,selObj,restore){ //v3.0 
 eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'"); 
