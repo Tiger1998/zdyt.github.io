@@ -1,0 +1,47 @@
+
+<html> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>Z-D-Y-T</title>
+ <script type="text/javascript">
+   (function (doc, win) {
+      var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function () {
+          var clientWidth = docEl.clientWidth;
+          if (!clientWidth) return;
+     
+        };
+      if (!doc.addEventListener) return;
+      win.addEventListener(resizeEvt, recalc, false);
+      doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+
+</script>
+<style> 
+.background{ background-color: #FFFFFF;height: 100%;max-width: 768px;margin: 0 auto;}
+.div-a{ background-color: #FFFFFF;height: 100%;max-width: 768px;margin: 0 auto;} 
+
+</style> 
+</head> 
+<body onload="javascript:window.alert('点击右上角“首页”，选择要跳转的页面。')">
+<div class="background">
+<div id="dg" style="z-index: 9999; position: fixed ! important; right: 0px; top: 0px;background-color: #000000;>
+<table width=""100% style="position: absolute; width:260px; right: 0px; top: 0px;">
+<SELECT name="select" onchange="window.open(this.options[this.selectedIndex].value,target='_self')">
+<OPTION value='index.html' selected>首页</OPTION>
+<OPTION value='1.htm'>技术服务</OPTION>
+<OPTION value='2.htm'>教程获取</OPTION>
+<OPTION value='3.htm'>常用软件</OPTION>
+<OPTION value='4.htm'>实用脚本</OPTION>
+<OPTION value='5.htm'>装机工具</OPTION>
+<OPTION value='6.htm'>系统镜像</OPTION>
+</SELECT>
+</table>
+</div>
+<div class="div-a"><iframe src="https://www.2345.com/?31133-1940" frameborder="0" width="100%" scrolling="yes" height="100%" leftmargin="0" topmargin="0"></iframe></div>
+
+
+</div>
+</body> 
+</html>
