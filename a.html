@@ -1,98 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+ 
 <title>Z-D-Y-T</title>
- <script type="text/javascript">
-   (function (doc, win) {
-      var docEl = doc.documentElement,
-        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
-        recalc = function () {
-          var clientWidth = docEl.clientWidth;
-          if (!clientWidth) return;
-     
-        };
-      if (!doc.addEventListener) return;
-      win.addEventListener(resizeEvt, recalc, false);
-      doc.addEventListener('DOMContentLoaded', recalc, false);
-    })(document, window);
+
 
 </script>
 <style>
-* {margin: 0;padding: 0;}
-body,
-html {font-size: 14px;font-family: 'Microsoft Yahei', '微软雅黑', 'Simsun', '宋体', 'Arial', sans-serif;}
-img {border: 0;}
-a {color: #fff;text-decoration: none;outline: none;}
-ol,ul,li {list-style: none;}
-.background{ background-color: #FFFFFF;height:100%;max-width: 768px;margin: 0 auto;}
-.div-0{ float:left;height: auto;width:100%;border:0px solid #000}
-.div-1{ float:left;height: auto;width:100%;border:0px solid #000}
-.head-nav {
-            width: 100%;
-            height: 60px;
-            background: #000000;
-        }
-        .head-nav-con {
-            width:100%;
-            height: 60px;
-            margin:0;
-        }
-        .head-nav-con ul li {
-            width: 25%;
-            float: left;
-            font-size: 20px;
-            text-align: center;
-        }
-        .head-nav-con ul li:hover {
-      
-            background: #C0C0C0;
-        }
-        .head-nav-con ul a {
-            display: block;
-            text-decoration: none;
-            text-align: center;
-            line-height: 60px;
-            color: white;
-        }
-        .head-nav-con .drop-down {
-          
-            position: relative;
-        }
-        .head-nav-con .drop-down-content {
-       
-            padding: 0;
-            display: none;
-            position: absolute;
-            z-index: 1;
-            background: #000000;
-        }
-        .head-nav-con .drop-down-content li:hover > a {
-        
-            background-color: #C0C0C0;
-        }
-        .head-nav-con .drop-down:hover .drop-down-content {
-            display: block;
-        }
+nav {
+    margin:100px auto;
+    text-align:center;
+} nav ul {
+    border-radius:10px;
+    background:linear-gradient(to bottom,#efefef,#bbbbbb);
+    padding:0 20px;
+    display:inline-table;
+    position:relative;  
+    box-shadow:1px 1px 3px #666;
+} nav ul ul {
+    display:none;
+} nav ul li {
+    float:left; 
+} nav ul::after {
+    content:"";
+    display:block;
+    clear:both;
+} nav ul li a {
+    display:block;
+    padding:25px 40px;
+    color:#000;
+    text-decoration:none;
+    font-family:"微软雅黑";
+} nav ul li:hover > ul {
+    display:block;
+} nav ul li:hover {
+    background:linear-gradient(to bottom,#4f5964,#5f6975);
+} nav ul li:hover a {
+    color:#FFF;
+} nav ul ul {
+    background:#5f6975;
+    border-radius:0;
+    position:absolute;
+    top:100%;
+    padding:0;
+} nav ul ul li {
+    float:none;
+    border-top:1px solid #6b727c;
+    border-bottom:1px solid #575f6a;
+} nav ul ul li a {
+    color:#FFF;
+} nav ul ul li a:hover {
+    background:#4b545f;
+} nav ul ul ul {
+    width:100%;
+    position:absolute;
+    left:100%;
+    top:50%;
+}
 
     </style>
 </head>
 
 <div class="background">
     <!--头部-->
-    <div class="header">
-        <div class="head-nav">
-            <div class="head-nav-con clearFloat">
-                <ul>
-                            
-                            <li ><a href="https://zdyt.github.io/a.html">装机工具</a></li>
-                            <li ><a href="https://zdyt.github.io/b.html">系统镜像</a></li>
-                            <li ><a href="https://zdyt.github.io/c.html">常用软件</a></li>
-                            <li ><a href="https://zdyt.github.io/d.html">实用脚本</a></li>
-                           
-                    </ul>
-            </div>
-        </div>
-    </div>
+   <nav> <ul> <li><a href="#">导航一</a> 
+<ul> <li><a href="#">二级导航</a></li> 
+<li><a href="#">二级导航</a></li> 
+<li><a href="#">二级导航</a></li> <li><a href="#">二级导航</a></li> 
+</ul> </li> <li><a href="#">导航二</a></li> 
+<li><a href="#">导航三</a> 
+<ul> <li><a href="#">二级导航</a></li> 
+<li><a href="#">二级导航</a></li> 
+<li><a href="#">二级导航</a> 
+<ul> <li><a href="#">三级导航</a></li> 
+<li><a href="#">三级导航</a></li> 
+<li><a href="#">三级导航</a></li> </ul> </li> 
+<li><a href="#">二级导航</a></li> </ul> </li> 
+<li><a href="#">导航四</a> 
+<ul> <li><a href="#">二级导航</a></li> 
+<li><a href="#">二级导航</a></li> 
+<li><a href="#">二级导航</a></li> </ul> </li> 
+<li><a href="#">导航五</a> 
+<ul> <li><a href="#">二级导航</a></li> 
+<li><a href="#">二级导航</a></li> </ul> </li> 
+<li><a href="#">导航六</a></li> </ul> 
+</nav> 
+
+
+
 <div class="div-1">
 <h1>USM-V5</h1>
 <p>USM-V5是系统总裁出产的PE系统，集成了全面的PE工具，难能可贵的是支持网络以及多款常见的远程工具，适合小白向他人求助。<a href="https://pan.baidu.com/s/1_mK7lu887S9ncnAah5SffA"><button>网盘下载</button></a>
@@ -120,7 +115,7 @@ ol,ul,li {list-style: none;}
 <p>系统总裁出产的封装工具，简单的操作封装出美观的释放效果。<a href="https://pan.baidu.com/s/1rz9qsLUn4zRTssDFiPJmWg"><button>网盘下载</button></a>
 <h1>UltraISO</h1>
 <p>又名软碟通，用于处理ISO文件，制作系统镜像有可能用到。<a href="https://pan.baidu.com/s/1vEH6XdH6lYwKuWqdVQEntw"><button>网盘下载</button></a>
-
+<p><img src="a-2.jpg" alt="关注公众号(ZDYT)获得更多，防迷路。"  width="100%" height="auto">
 </div>
 </div>
 </div>
