@@ -1,64 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
 <title>Z-D-Y-T</title>
+ <script type="text/javascript">
+   
+</script>
 <style>
-*{
-    margin:0;
-    padding:0;
-
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
 }
-html,body{
-    width:100%;
-    height:100%;
+main {
+  height: 100%;
+  width: 100%;
 }
-.container{
-    width:80%;
-    height:100%;
-    margin:0 auto;
-    margin-top:30px;
-    border:1px solid #dddddd;
-    border-radius:1px;
+aside {
+  background-color: #0799d3;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 20%;
+  z-index: 1;
 }
-input{
-    display:none;
+section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  overflow: hidden;
 }
-label{
-    display:block;
-    background-color: #F5F5F5;
-    width:99%;
-    height:;
-    margin:0 auto;
-    border:1px solid #dddddd;
-    border-radius:2px;
-    margin-top:5px;
-    line-height: 40px;
+label {
+  display: inline-block;
+  padding: 7px 10px;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 10px;
+  z-index: 3;
+  position: fixed;
 }
-.context{
-    width:99%;
-    height:auto;
-    margin:0 auto;
-    border:1px solid #dddddd;
-    border-radius:2px;
-    visibility: hidden;
-    transition:height 0.5s linear;
-    -webkit-transition:height 0.5s linear;
-    -moz-transition:height 0.5s linear;
-    -ms-transition:height 0.5s linear;
+.bar {
+  display: block;
+  background-color: #0799d3;
+  width: 30px;
+  height: 3px;
+  border-radius: 5px;
+  margin: 5px auto;
+  transition: background-color .5s ease-in, transform .5s ease-in, width .5s ease-in;
 }
-input:checked + label + .context{
-    visibility: visible;
-    height:150px;
+.content {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 2;
+  transition: transform .5s ease-in-out;
+ overflow:hidden;
+ overflow-y:auto;
 }
-    </style>
+h1 {
+  margin: 0;
+  position: relative;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  text-align: center;
+  font-size: 40px;
+}
+.asideList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 100px;
+  text-align: center;
+  border-top: 2px solid rgba(255, 255, 255, .7);
+}
+.asideAnchor {
+  border-bottom: 2px solid rgba(255, 255, 255, .7);
+  padding: 20px 0;
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  position: relative;
+  transition: color .3s .15s ease-in;
+}
+.asideAnchor::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  background-color: #fff;
+  width: 0;
+  transition: width .3s ease-in;
+  z-index: -1;
+}
+.asideAnchor:hover {
+  color: #0799d3;
+}
+.asideAnchor:hover::after {
+  width: 100%;
+}
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"]:checked ~ .content {
+  transform: translateX(20%);
+}
+input[type="checkbox"]:checked ~ label .bar {
+  background-color: #fff;
+}
+input[type="checkbox"]:checked ~ label .top {
+  -webkit-transform: translateY(0px) rotateZ(45deg);
+  -moz-transform: translateY(0px) rotateZ(45deg);
+  -ms-transform: translateY(0px) rotateZ(45deg);
+  -o-transform: translateY(0px) rotateZ(45deg);
+  transform: translateY(0px) rotateZ(45deg);
+}
+input[type="checkbox"]:checked ~ label .bottom {
+  -webkit-transform: translateY(-15px) rotateZ(-45deg);
+  -moz-transform: translateY(-15px) rotateZ(-45deg);
+  -ms-transform: translateY(-15px) rotateZ(-45deg);
+  -o-transform: translateY(-15px) rotateZ(-45deg);
+  transform: translateY(-15px) rotateZ(-45deg);
+}
+input[type="checkbox"]:checked ~ label .middle {
+  width: 0;
+}
+.middle {
+  margin: 0 auto;
+}
+.ua {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  color: #0799d3;
+  font-size: 2em;
+  z-index: 2;
+}
+</style>
 </head>
+
 <body>
-<div class="container">
-<input type="radio" id="item1" name="item">
-<label for="item1">系统工具</label>
-<div class="context hiddenDiv">
-<span>
-   <h1>USM-V5</h1>
+   <main>
+  <aside>
+    <ul class="asideList">
+      <li><a href="index.html" class="asideAnchor">首页</a></li>
+      <li><a href="download.html" class="asideAnchor">下载</a></li>
+      <li><a href="follow.html" class="asideAnchor">关注</a></li>
+      <li><a href="Coupon.html" class="asideAnchor">优惠券</a></li>
+    </ul>
+  </aside>
+  <section>
+    <input type="checkbox" id="myInput">
+    <label for="myInput">
+      <span class="bar top"></span>
+      <span class="bar middle"></span>
+      <span class="bar bottom"></span>
+    </label>
+
+    <div class="content">
+        <br/>
+    <h1>USM-V5</h1>
 <p>USM-V5是系统总裁出产的PE系统，集成了全面的PE工具，难能可贵的是支持网络以及多款常见的远程工具，适合小白向他人求助。<a href="https://pan.baidu.com/s/1_mK7lu887S9ncnAah5SffA"><button>网盘下载</button></a>
 <h1>dism++</h1>
 <p>dism++是一款基于微软开发的dism改良的PE工具，功能十分全面，适合维护人员使用。<a href="https://pan.baidu.com/s/1hasxiHDP2yuf-RAA7o1zKg"><button>网盘下载</button></a>
@@ -83,23 +195,12 @@ input:checked + label + .context{
 <h1>Scpt</h1>
 <p>系统总裁出产的封装工具，简单的操作封装出美观的释放效果。<a href="https://pan.baidu.com/s/1rz9qsLUn4zRTssDFiPJmWg"><button>网盘下载</button></a>
 <h1>UltraISO</h1>
-<p>又名软碟通，用于处理ISO文件，制作系统镜像有可能用到。<a href="https://pan.baidu.com/s/1vEH6XdH6lYwKuWqdVQEntw"><button>网盘下载</button></a> 
-</span>
-</div>
-<input type="radio" id="item2" name="item">
-<label for="item2">系统镜像</label>
-<div class="context hiddenDiv">
-<span>
-    
-</span>
-</div>
-<input type="radio" id="item3" name="item">
-<label for="item3">常用软件</label>
-<div class="context hiddenDiv">
-<span>
-    
-</span>
-</div>
-</div>
+<p>又名软碟通，用于处理ISO文件，制作系统镜像有可能用到。<a href="https://pan.baidu.com/s/1vEH6XdH6lYwKuWqdVQEntw"><button>网盘下载</button></a>
+
+    </div>
+  </section>
+</main>
+
+
 </body>
 </html>
