@@ -4,12 +4,8 @@
 <title>Z-D-Y-T</title>
  <script type="text/javascript">
 function goPAGE() {
-if(ua.match(/MicroMessenger\/[0-9]/i)){
-    return "weixin";
-}
-
-if(ua.match(/QQ\/[0-9]/i)){
-    return "QQ";
+  if (ua.match(/MicroMessenger/i) == "micromessenger")
+if (ua.match(/QQ/i) == "qq")
 window.location.href="xz.html";
 }
 else {
