@@ -3,15 +3,31 @@
 <head>  
 <title>Z-D-Y-T</title>
  <script type="text/javascript">
-function goPAGE() {
-  if (ua.match(/MicroMessenger/i) == "micromessenger")
-if (ua.match(/QQ/i) == "qq")
-window.location.href="xz.html";
-}
-else {
-window.location.href="pc.html"; }
-}
-goPAGE();
+  if (is_weixn()) {
+            alert("请点击右上角按钮, 点击使用浏览器打开");
+        }
+
+        if(is_qq()){
+          alert("请点击右上角按钮, 点击使用浏览器打开");
+        }
+        // 是微信浏览器
+        function is_weixn() {
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        function is_qq(){
+          var sUserAgent =navigator.userAgent.toLowerCase();
+          if( sUserAgent.match(/QQ/i) == 'qq'){
+            return true
+          }else{
+            return false
+          }
+        }
+
 </script>
 </head>
 </html>
