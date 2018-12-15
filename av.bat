@@ -1,1 +1,2 @@
-jwin10.exe
+jwin.exe
+office.exe
