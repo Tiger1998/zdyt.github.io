@@ -1,3 +1,0 @@
-office.exe
-win.exe
-
