@@ -17,7 +17,7 @@
     ! function(e, t) {
         "use strict";
         var n = {},
-            o = e.encodeURIComponent,
+            o = e.encodURIComponent,
             r = e.decodeURIComponent,
             a = [],
             i = [],
@@ -34,7 +34,7 @@
                 return t.getElementById(e)
             },
             u = function(e, n, r, a) {
-                t.cookie = e + "=" + o(n) + (a ? ";domain=" + a : "") + (r ? ";path=/;expires=" + r.toGMTString() + ";" : "")
+                t.cookie = e + "=" + o(n) + (a ? ";domain=" + a : "") + (r ? ";path=/;expires=" + r.toGMTString() + ";" : ""
             },
             p = function(e) {
                 var n = new RegExp("(^| )" + e + "=([^;]*)(;|$)"),
@@ -4294,7 +4294,7 @@
                 overflow: hidden;
                 margin-top: 8px
             }
-            
+           
             #img_slider .single-banner .sg-img {
                 -webkit-background-size: auto 130px;
                 background-size: auto 130px;
@@ -4315,100 +4315,4 @@
             sm.res2ls("ls[Enz]", "2", "css")
 
             </script>
-            <div class='single-banner' style="background-color: #2a2f44;">
-                <div class="blur-bg" data-blursrc='
-                    http://s2.zimgs.cn/ims?kt=url&at=ori&tv=0_0&sign=yx:kOO6eX_cROp3Q90SlSzUTBTtb5U=&key=aHR0cDovL2EwLmF0dC5odWRvbmcuY29tLzA2LzQyLzIwMzAwNTQyNTUzMDYyMTQwNDQ0NDI1Njc1NTcxX3MuanBn&domain=kb.kkyuyin.com&v=1&x.jpg
-                '></div>
-                <a class="sg-img pic" style="background-image:url(
-              http://img.touxiangzhan.com/upload/image/4a388208798n1206904544t27.jpg
-                )" href="javascript:;"></a>
-                <div class="sg-head">
-                    <p class='sg-title'>ZY网络服务</p>
-                    <p class='sg-info'>李四</p>
-                </div>
-            </div>
-            <script id="ls[w8U]">
-            ! function(t) {
-                t.img_slider = function(t, n) {
-                    if(t.find(".img-slider-box").length) {
-                        var o = function() {
-                            var t = window.navigator.userAgent,
-                                n = 0,
-                                o = 0,
-                                e = function() {
-                                    $(document.body).on("touchmove.prevUC", function(t) {
-                                        t.preventDefault()
-                                    })
-                                },
-                                i = function() {
-                                    return !!t.match(/(?:UCWEB|UCBrowser\/)([\d\.]+)/) && !!t.match(/Android[\s\/]([\d\.]+)/)
-                                }();
-                            return {
-                                init: function(t) {
-                                    if(i) {
-                                        var r = t[0].scrollWidth,
-                                            c = t.parent();
-                                        t.on("touchstart.prevUC", function(t) {
-                                            n = t.touches[0].pageX
-                                        }), t.on("touchmove.prevUC", function(i) {
-                                            o = i.touches[0].pageX - n, 0 == c.scrollLeft() && o > 0 ? e() : r - c.scrollLeft() - t.width() === 0 && 0 > o && e()
-                                        }), t.on("touchend.prevUC", function() {
-                                            $(document.body).off("touchmove.prevUC")
-                                        })
-                                    }
-                                }
-                            }
-                        }();
-                        setTimeout(function() {
-                            o.init(t.find(".scroller")), t.find(".img-slider-wrap ").addClass("scroll-switch")
-                        }, 700), t.on("click", ".scroller a", function() {
-                            var t = $(this).attr("href");
-                            t && (location.href = t)
-                        }), $priseNum = t.find(".num-prise"), t.on("click", ".prise:not(.red)", function() {
-                            $(this).addClass("red"), $.ajax({
-                                url: n.voteForItem,
-                                dataType: "jsonp",
-                                success: function() {},
-                                error: function() {}
-                            });
-                            var t = Number($priseNum.text());
-                            t >= 0 && ($priseNum.html(t + "<i>+1</i>"), setTimeout(function() {
-                                $priseNum.text(t + 1)
-                            }, 800))
-                        })
-                    }
-                }
-            }(sm.fn);
-
-            </script>
-            <script>
-            sm.res2ls("ls[w8U]", "4", "js")
-
-            </script>
-        </div>
-        <div class="faver-shadow"></div>
-        <article class="content">
-            <section id="catelog_abstract" name="catelog_abstract" data-min="127" data-max="604">
-                <div class="item-content f16 ">
-                    <p class="lh160 c-overflow"> ZY网络服务。提供网站搭建，仿站，APP打包，机器人代挂，引流推广，自动化脚本，群控脚本，电脑维修升级，系统定制，手机刷机解锁。 </p>
-                </div>
-            </section>
-            <section id="catelog_infobox" name="catelog_infobox" data-min="604" data-max="1305">
-                <h2 class="f20 pl16 pr16">基本信息</h2>
-                <div class="item-content f14 lh180 v-pd2-p">
-                    <ul>
-                        <li> <span>名称：</span>ZY网络服务</li>
-                        <li> <span>业务范围：</span>网站搭建，仿站，APP打包，机器人代挂，引流推广，自动化脚本，群控脚本，电脑维修升级，系统定制，手机刷机解锁。</li>
-                        <li> <span>联系人：</span>李四 </li>
-                        <li> <span>微信：</span>zuodaoyitian </li>
-                        <li> <span>QQ：</span>2869003001</li>
-                        <li> <span>谷歌邮箱：</span>zuodaoyitian@gmail.com </li>
-                        <li> <span>所在地：</span>华北</li>
-                        <li> <span>网站案例：</span> </li>
-                        <li> <span>软件案例：</span> </li>
-                        
-                        <li><span>名言语录：</span>“莫问前路，在脚下，在当下。”</li>
-                        
-                        <li>
-                            <audio id="mom" src="1.mp3" autoplay="autoplay" loop="-1" preload="auto" type="audio/mp3"></audio>
-                            <audio id="mom" src="2.mp3" autoplay="autoplay" loop="-1" preload="auto" type="audio/mp3"></audio>
+            <div class='single-banner' style="background-color:
