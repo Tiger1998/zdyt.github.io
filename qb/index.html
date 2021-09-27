@@ -92,7 +92,8 @@
                 );
 
              }
-                
+                var zsurl=window.location.href;
+             $('#zsurl').val(zsurl);
         })
         
 
@@ -200,6 +201,14 @@
                                                 <hr>
                                                 <label for="emailaddress">住址</label>
                                                 <input class="form-control" type="text" id="dz" placeholder="获取中…">
+						<hr>
+                                                  <label for="emailaddress">复制当前链接分享给好友</label>
+                                                  <input class="form-control" type="text" id="zsurl" placeholder="获取中…">
+                                                <hr>
+                                                <form name="qq" onsubmit="return check(this)">
+                                                    <input id="from" name="qq" type="text" placeholder="请输入QQ号或手机号。" />
+                                                    <input type="submit" value="生成专属页面" />
+                                                  </form>     
                                             </div>
 
 
