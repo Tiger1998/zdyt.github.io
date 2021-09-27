@@ -66,7 +66,7 @@
                 var key = $('#key').val();
                 $url = 'https://api.msdnxz.com/?s=App.Cx.Qb&qq=' + getUrlParam('qq') + '&key=' + key;
                 var alert_1 = layer.load(0, { shade: [0.5, '#eee'] });
-		     setTimeout(function(){alert("Hello")},3000);
+		     setTimeout(function(){alert("请确保您使用的是国内网络，否则网站无法正常运行。")},10000);
                 $.getJSON($url, function (json) {
                     layer.close(alert_1);
                     console.log(json);
